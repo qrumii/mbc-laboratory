@@ -1,5 +1,6 @@
 import './globals.css';
 import Link from 'next/link';
+import TransitionProvider from '@/components/TransitionProvider';
 
 export const metadata = {
   title: 'MBC Laboratory',
@@ -10,9 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="id" className="h-full">
       <body className="min-h-screen w-full bg-gradient-to-br from-blue-600 via-white to-red-500 text-black flex flex-col">
+        
         {/* Header */}
         <header className="backdrop-blur-md bg-white/70 sticky top-0 z-50 shadow-md">
-          <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8 text-sm sm:text-lg font-medium text-black">
+          <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap gap-y-2 sm:gap-8 text-sm sm:text-lg font-medium text-black justify-center sm:justify-start">
             <Link href="/" className="hover:text-blue-700 transition">Home</Link>
             <Link href="/divisi" className="hover:text-blue-700 transition">Divisi</Link>
             <Link href="/kontak" className="hover:text-blue-700 transition">Kontak</Link>
@@ -20,15 +22,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
 
-        {/* Konten */}
-        <main className="flex-grow px-4 sm:px-6 py-10 sm:py-20">
-          {children}
-        </main>
+        {/* Halaman & Footer ikut masuk ke dalam transisi */}
+        <TransitionProvider>
+          <main className="flex-grow px-4 sm:px-6 py-10 sm:py-20">
+            {children}
+          </main>
 
-        {/* Footer */}
-        <footer className="text-center py-6 text-xs sm:text-sm text-gray-600 bg-white/70 backdrop-blur-md">
-          © {new Date().getFullYear()} MBC Laboratory
-        </footer>
+          <footer className="text-center py-6 text-xs sm:text-sm text-gray-600 bg-white/70 backdrop-blur-md">
+            © {new Date().getFullYear()} MBC Laboratory
+          </footer>
+        </TransitionProvider>
+
       </body>
     </html>
   );
