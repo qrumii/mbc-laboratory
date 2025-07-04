@@ -9,26 +9,25 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" className="h-full">
+    <html lang="en" className="h-full">
       <body className="min-h-screen w-full bg-gradient-to-br from-blue-600 via-white to-red-500 text-black flex flex-col">
         {/* Header */}
         <header className="backdrop-blur-md bg-white/70 sticky top-0 z-50 shadow-md">
-  <nav className="max-w-6xl mx-auto px-6 py-4 flex gap-8 text-lg font-medium text-black">
-    <Link href="/" className="hover:text-blue-700">Home</Link>
-    <Link href="/divisi" className="hover:text-blue-700">Divisi</Link>
-    <Link href="/kontak" className="hover:text-blue-700">Kontak</Link>
-    <Link href="/developer" className="hover:text-blue-700">Developer</Link>
-  </nav>
-</header>
-
+          <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap gap-y-2 sm:gap-8 text-sm sm:text-lg font-medium text-black justify-center sm:justify-start">
+            <Link href="/" className="hover:text-blue-700 transition">Home</Link>
+            <Link href="/divisi" className="hover:text-blue-700 transition">Divisi</Link>
+            <Link href="/kontak" className="hover:text-blue-700 transition">Kontak</Link>
+            <Link href="/developer" className="hover:text-blue-700 transition">Developer</Link>
+          </nav>
+        </header>
 
         {/* Konten */}
-        <main className="flex-grow px-4 py-20">
+        <main className="flex-grow px-4 sm:px-6 py-10 sm:py-20">
           {children}
         </main>
 
         {/* Footer */}
-        <footer className="text-center py-6 text-sm text-gray-600 bg-white/70 backdrop-blur-md">
+        <footer className="text-center py-6 text-xs sm:text-sm text-gray-600 bg-white/70 backdrop-blur-md">
           © {new Date().getFullYear()} MBC Laboratory
         </footer>
       </body>

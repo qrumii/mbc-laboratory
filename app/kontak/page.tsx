@@ -37,10 +37,10 @@ export default function Kontak() {
   };
 
   return (
-    <main className="space-y-6">
-      <h1 className="text-3xl font-bold text-black">Hubungi Kami</h1>
+    <main className="space-y-6 px-4 py-8 sm:py-12 text-black">
+      <h1 className="text-2xl sm:text-3xl font-bold text-center">Hubungi Kami</h1>
 
-      <div className="text-black space-y-1">
+      <div className="text-base sm:text-lg space-y-2 max-w-xl mx-auto text-center sm:text-left">
         <p>
           <strong>Alamat:</strong> Jl. Teknologi No. 123, Bandung
         </p>
@@ -52,35 +52,40 @@ export default function Kontak() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-4 max-w-md w-full mx-auto text-black"
+      >
         <input
           type="text"
           name="nama"
           placeholder="Nama"
           required
-          className="w-full p-2 border rounded text-black"
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <input
           type="email"
           name="email"
           placeholder="Email"
           required
-          className="w-full p-2 border rounded text-black"
+          className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <textarea
           name="pesan"
           placeholder="Pesan"
           rows={4}
           required
-          className="w-full p-2 border rounded text-black"
+          className="w-full p-3 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
         ></textarea>
         <button
           type="submit"
-          className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+          className="w-full sm:w-auto bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition"
         >
           Kirim Pesan
         </button>
-        {status && <p className="text-sm text-black pt-2">{status}</p>}
+        {status && (
+          <p className="text-sm text-green-600 font-medium pt-2">{status}</p>
+        )}
       </form>
     </main>
   );

@@ -31,24 +31,24 @@ export default function DivisiPage() {
   ];
 
   return (
-    <div className="py-24 px-6">
-      <div className="max-w-6xl mx-auto bg-white/70 backdrop-blur-md rounded-2xl p-12 shadow-xl">
-        <h1 className="text-4xl font-bold text-center mb-10 text-black">
+    <div className="py-16 sm:py-24 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto bg-white/70 backdrop-blur-md rounded-2xl p-6 sm:p-12 shadow-xl">
+        <h1 className="text-2xl sm:text-4xl font-bold text-center mb-10 text-black leading-snug">
           Bidang Keahlian MBC Laboratory
         </h1>
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
           {divisions.map((divisi, idx) => (
             <div
               key={idx}
-              className="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition border border-gray-200"
+              className="bg-white shadow-md rounded-xl p-5 sm:p-6 hover:shadow-xl transition border border-gray-200"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-3 sm:gap-4 mb-4">
                 {divisi.icon}
-                <h2 className="text-2xl font-semibold text-black">
+                <h2 className="text-xl sm:text-2xl font-semibold text-black">
                   {divisi.title}
                 </h2>
               </div>
-              <p className="text-gray-700 leading-relaxed text-justify">
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
                 {divisi.description}
               </p>
             </div>
