@@ -23,7 +23,7 @@ export default function DeveloperPage() {
             Saya adalah mahasiswa aktif program studi <strong>Teknik Telekomunikasi</strong> dengan minat khusus dalam bidang <strong>Internet of Things (IoT)</strong>, <strong>pengembangan web</strong>, dan <strong>teknologi jaringan</strong>.
           </p>
           <p className="text-gray-800 text-base sm:text-lg leading-relaxed text-justify">
-            Proyek ini dibangun dengan menggunakan <strong>Next.js</strong> dan <strong>Tailwind CSS</strong>, serta didukung oleh backend <strong>Node.js</strong> dan <strong>PHP</strong> untuk kebutuhan API dan pengelolaan data.
+            Proyek ini dibangun dengan menggunakan <strong>Next.js</strong> dan <strong>Tailwind CSS</strong>, serta didukung oleh backend <strong>Node.js</strong> dan <strong><Express></Express></strong> untuk kebutuhan API dan pengelolaan data.
           </p>
           <p className="text-gray-800 text-base sm:text-lg">
             NIM: <strong>101012300280</strong>
