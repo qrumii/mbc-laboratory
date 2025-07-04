@@ -1,6 +1,7 @@
 "use client";
 
 import { Lightbulb, Rocket, Users, Brain } from "lucide-react";
+import Link from "next/link"; // ✅ Tambahan penting
 
 export default function Home() {
   return (
@@ -17,9 +18,9 @@ export default function Home() {
         <h2 className="text-3xl font-semibold text-black flex items-center gap-2">
           <Lightbulb className="text-yellow-500" /> Visi
         </h2>
-       <p className="text-black text-justify pl-4 pr-4">
-        Menjadi laboratorium terdepan dalam inovasi teknologi digital yang memberikan <em>dampak positif dan berkelanjutan</em> bagi masyarakat lokal maupun global.
-      </p>
+        <p className="text-black text-justify pl-4 pr-4">
+          Menjadi laboratorium terdepan dalam inovasi teknologi digital yang memberikan <em>dampak positif dan berkelanjutan</em> bagi masyarakat lokal maupun global.
+        </p>
       </section>
 
       {/* MISI */}
@@ -45,9 +46,11 @@ export default function Home() {
 
       {/* CTA */}
       <div className="text-center pt-4">
-        <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-full shadow-md transition">
-          Pelajari Lebih Lanjut
-        </button>
+        <Link href="/divisi">
+          <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-full shadow-md transition">
+            Pelajari Lebih Lanjut
+          </button>
+        </Link>
       </div>
     </div>
   );
