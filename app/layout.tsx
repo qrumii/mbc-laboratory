@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
         {/* Header */}
         <header className="backdrop-blur-md bg-white/70 sticky top-0 z-50 shadow-md">
-          <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap gap-y-2 sm:gap-8 text-sm sm:text-lg font-medium text-black justify-center sm:justify-start">
+          <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row gap-2 sm:gap-8 text-sm sm:text-lg font-medium text-black text-center sm:text-left items-center sm:items-start justify-center sm:justify-start">
             <Link href="/" className="hover:text-blue-700 transition">Home</Link>
             <Link href="/divisi" className="hover:text-blue-700 transition">Divisi</Link>
             <Link href="/kontak" className="hover:text-blue-700 transition">Kontak</Link>
