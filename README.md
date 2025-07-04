@@ -222,9 +222,6 @@ mbc-backend/
 ## 🛡️ 4. Konfigurasi IDS *(Jika Digunakan)*
 
 > Saat ini proyek tidak menggunakan IDS (Intrusion Detection System) secara langsung.
-Namun, untuk kebutuhan keamanan lebih lanjut, dapat digunakan layanan pihak ketiga seperti:
-- **Cloudflare** untuk WAF dan IDS ringan
-- **Fail2Ban** atau **OSSEC** jika backend dihosting sendiri (VPS)
 
 ---
 
