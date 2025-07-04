@@ -159,4 +159,86 @@ mbc-backend/
    `https://mbc-laboratory.onrender.com`
 
 
+# 📄 Dokumentasi Tambahan - MBC Laboratory
+
+## 🧩 1. Diagram Arsitektur Website
+
+```
+[Frontend (Next.js + Tailwind CSS)]
+        |
+        | fetch (HTTP POST)
+        v
+[Backend (Node.js + Express)]
+        |
+        | Nodemailer
+        v
+[Email Service (Gmail via SMTP)]
+```
+
+- **Frontend**: Dibangun dengan Next.js (React) & Tailwind CSS  
+- **Backend**: Express.js dengan REST endpoint `/api/contact`  
+- **Email Service**: Gmail (SMTP) menggunakan `nodemailer`
+
+---
+
+## 🔄 2. Alur Kerja Form Kontak
+
+1. Pengguna mengisi form di halaman `/kontak`.
+2. Saat klik tombol **Kirim Pesan**, form dikirim menggunakan `fetch()` ke:
+   ```
+   https://mbc-laboratory.onrender.com/api/contact
+   ```
+3. Di backend:
+   - Express menerima POST request.
+   - Data divalidasi.
+   - Email dikirim menggunakan Nodemailer.
+4. Backend merespons:
+   - 200: jika email berhasil dikirim.
+   - 500: jika gagal mengirim email.
+5. Frontend menampilkan pesan sukses atau gagal di bawah tombol.
+
+---
+
+## 🖼️ 3. Screenshot Tampilan Semua Halaman
+
+![image](https://github.com/user-attachments/assets/5901d921-2d89-47f3-91d7-c48220cbaf18)
+
+![image](https://github.com/user-attachments/assets/ee8c51a4-b963-408e-a380-abf92bcbb7ff)
+
+![image](https://github.com/user-attachments/assets/4722cbea-6eea-443c-9fd6-a373b6e3e856)
+
+![image](https://github.com/user-attachments/assets/b7a8ede3-3dd8-4ffb-b5da-2dcc8aebbb82)
+
+
+| Halaman      | Deskripsi                                    |
+|--------------|----------------------------------------------|
+| Home         | Deskripsi MBC Lab, visi & misi               |
+| Divisi       | Penjelasan 4 bidang: Game Tech, Big Data, GIS, Cybersecurity |
+| Developer    | Profil pengembang (nama, foto, kompetensi)   |
+| Kontak       | Form kontak + informasi alamat/email         |
+
+---
+
+## 🛡️ 4. Konfigurasi IDS *(Jika Digunakan)*
+
+> Saat ini proyek tidak menggunakan IDS (Intrusion Detection System) secara langsung.
+Namun, untuk kebutuhan keamanan lebih lanjut, dapat digunakan layanan pihak ketiga seperti:
+- **Cloudflare** untuk WAF dan IDS ringan
+- **Fail2Ban** atau **OSSEC** jika backend dihosting sendiri (VPS)
+
+---
+
+## 📦 Tambahan
+
+- **Frontend dihosting di**: Vercel  
+- **Backend dihosting di**: Render  
+- **Domain**: `https://mbc-laboratory-rizqi.vercel.app`  
+- **SSL**: Otomatis dari Vercel & Render via HTTPS
+
+---
+
+## 🔗 Repositori
+
+- Frontend: [GitHub - mbc-laboratory](https://github.com/qrumii/mbc-laboratory)
+
 
