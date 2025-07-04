@@ -16,7 +16,7 @@ export default function Kontak() {
     const data = { nama, email, pesan };
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://mbc-laboratory.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
